@@ -18,5 +18,5 @@ vec.push_back(std::string(100, 'c' ));
 ```
 - Call `emplace_back` when you want to create a new object
 - Call `push_back` when you already have object
-- You can not move const object
-- push_back by copy has worst performances
+- You can not `move` `const` object
+- `push_back` by copy has worst performances
