@@ -26,7 +26,7 @@ vec.push_back(std::string(100, 'c' ));
 - `auto` uses the exact same rules as template type parameters (copy)
 - `auto` will never deduce a `&`
 - `const`-ness will be deduced (for references and pointers)
-- * value type are always copies
+- \* value type are always copies
 
 ## 288 : Quick Perf Tip: Prefer `auto`
 
