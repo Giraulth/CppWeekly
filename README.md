@@ -20,3 +20,11 @@ vec.push_back(std::string(100, 'c' ));
 - Call `push_back` when you already have object
 - You can not `move` a `const` object
 - `push_back` by copy has worst performances
+
+## 287 : Understanding `auto`
+
+- `auto` uses the exact same rules as template type parameters (copy)
+- `auto` will never deduce a `&`
+- `const`-ness will be deduced (for references and pointers)
+- * value type are always copies
+
