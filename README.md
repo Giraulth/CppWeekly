@@ -28,3 +28,13 @@ vec.push_back(std::string(100, 'c' ));
 - `const`-ness will be deduced (for references and pointers)
 - * value type are always copies
 
+## 288 : Quick Perf Tip: Prefer `auto`
+
+- `auto` will never perform a conversion
+- `auto` is generally better peforming because it eliminates accidental conversions
+```
+const map<string, string> & get_data();
+for (const pair<string,string> & elem : get_data) {} // bad because of conversion
+for (const auto & elem : get_data) {} // better
+for (const auto &[key, val] : get_data) {} // same perf but in C++ 17
+```
