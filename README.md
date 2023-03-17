@@ -28,6 +28,12 @@ vec.push_back(std::string(100, 'c' ));
 - `const`-ness will be deduced (for references and pointers)
 - \* value type are always copies
 
+```
+string value;
+const int size = value.size(); // warning because it's not int type
+const auto size = value.size(); // better
+```
+
 ## 288 : Quick Perf Tip: Prefer `auto`
 
 - `auto` will never perform a conversion
